@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/onShow/onShow",
+    "pages/topFilms/topFilms",
+    "pages/coming/coming"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#1abc9c",
+    "navigationBarTitleText": "电影",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "borderStyle": "white",
+    "selectedColor": "#1abc9c",
+    "list": [{
+      "pagePath": "pages/onShow/onShow",
+      "text": "正在热映",
+      "iconPath": "static/movie.png",
+      "selectedIconPath": "static/movie-c.png"
+    }, {
+      "pagePath": "pages/topFilms/topFilms",
+      "text": "Top250",
+      "iconPath": "static/diamond.png",
+      "selectedIconPath": "static/diamond-c.png"
+    }, {
+      "pagePath": "pages/coming/coming",
+      "text": "即将上映",
+      "iconPath": "static/theater.png",
+      "selectedIconPath": "static/theater-c.png"
+    }]
+  }
+}

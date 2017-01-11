@@ -1,0 +1,6 @@
+<!--index.wxml-->
+<view class="movie-list">
+  <view  wx:for="{{films}}" class="movie-item" wx:for-item="film">
+      <image  mode="scaleToFill" src="{{film.images.medium}}"></image>
+  </view>
+</view>

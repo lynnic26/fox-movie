@@ -1,0 +1,21 @@
+<template name="film-list">
+    <view class="movie-list">
+        <view  wx:for="{{films}}" class="movie-item" wx:for-item="film">
+            <image mode="scaleToFill" src="{{film.images.medium}}"></image>
+            <view class="movie-content">
+                <view class="movie-title">{{film.title}}</view>
+                <view class="movie-rate">{{film.rating.average}}</view>
+                <view class="movie-tags">
+                    <view wx:for="{{film.genres}}" wx:for-item="tag" class="tag">
+                        {{tag}}
+                    </view>
+                </view>
+                <view class="movie-casts">
+                    <view wx:for="{{film.casts}}" wx:for-item="cast" class="cast">
+                        {{cast.name}}
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</template>
