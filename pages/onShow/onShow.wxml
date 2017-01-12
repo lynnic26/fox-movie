@@ -1,3 +1,4 @@
 <!--pages/onShow/onShow.wxml-->
 <import src="../templates/filmList" />
 <template is="film-list" data="{{films: films}}" />
+<loading hidden="{{hiddenLoading}}">正在加载</loading>

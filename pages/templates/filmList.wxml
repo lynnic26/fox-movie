@@ -1,6 +1,6 @@
 <template name="film-list">
-    <view class="movie-list">
-        <view  wx:for="{{films}}" class="movie-item" wx:for-item="film">
+    <view class="movie-list" >
+        <view  wx:for="{{films}}" class="movie-item" wx:for-item="film" data-title="{{film.title}}" id="{{film.id}}" bindtap="toFilmDetailPage" >
             <image mode="scaleToFill" src="{{film.images.medium}}"></image>
             <view class="movie-content">
                 <view class="movie-title">{{film.title}}</view>
@@ -10,7 +10,14 @@
                         {{tag}}
                     </view>
                 </view>
+                <view class="movie-casts" style="padding-top: 15rpx;">
+                    导演: 
+                    <view wx:for="{{film.directors}}" wx:for-item="director" class="cast">
+                        {{director.name}}
+                    </view>
+                </view>
                 <view class="movie-casts">
+                    主演: 
                     <view wx:for="{{film.casts}}" wx:for-item="cast" class="cast">
                         {{cast.name}}
                     </view>

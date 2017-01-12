@@ -14,7 +14,8 @@ App({
      apis: {
         'ON_SHOW': '/v2/movie/in_theaters',
         'TOP_RANK': '/v2/movie/top250',
-        'COMING_SOOM': '/v2/movie/new_movies'
+        'COMING_SOOM': '/v2/movie/new_movies',
+        'DETAIL': '/v2/movie/subject/'
      }  
   }
 })
