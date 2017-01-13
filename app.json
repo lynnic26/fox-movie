@@ -1,9 +1,10 @@
 {
   "pages":[
+    "pages/detail/detail",
     "pages/onShow/onShow",
     "pages/topFilms/topFilms",
-    "pages/coming/coming",
-    "pages/detail/detail"
+    "pages/coming/coming"
+    
   ],
   "window":{
     "backgroundTextStyle":"light",

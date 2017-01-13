@@ -1,2 +1,35 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class="detail-header" >
+    <view class="blur-layer" style="background-image: url({{film.images.large}})"></view>
+    <view class="real-content">
+         <image class="stage-photo" src="{{film.images.medium}}">
+         </image>
+         <view class="detail-intro">
+            <view class="title">{{film.title}}</view>
+            <view class="en-title">{{film.original_title}}</view>
+            <view class="rating">
+                <image  class="lower" src="../../static/star-empty.png" ></image>
+                <image  mode="left" class="upper" src="../../static/star-full.png" style="width:{{starWidth}}"></image>
+                <view class="rating-digit">{{film.rating.average}}</view>
+                <view class="rating-count">({{film.rating.stars}}人评)</view>
+            </view>
+            <view class="tags">{{tags}}</view>
+            <view class="country-length">{{countries}}</view>
+            <view class="release-time">{{film.year}}年上映</view>
+         </view>
+    </view>
+</view>
+
+<view class="film-summary">
+    <view class="summary-content" style="height:{{summaryHeight}}">
+        {{film.summary}}
+    </view>
+    <view class="summary-operation" bindtap="toggleSummary">
+        <image wx:if="{{summaryCollapse}}" src="../../static/arrow-down.png"></image>
+        <image wx:else src="../../static/arrow-up.png"></image>
+    </view>
+</view>
+
+<scroll-view class="film-casts">
+xxx
+</scroll-view>
